@@ -1,0 +1,55 @@
+{
+  "expo": {
+    "name": "MiniLedger",
+    "slug": "miniledger",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "scheme": "miniledger",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#F5F6F8"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.miniledger.app",
+      "infoPlist": {
+        "NSCameraUsageDescription": "MiniLedger uses the camera so you can photograph a receipt for a loan entry.",
+        "NSPhotoLibraryUsageDescription": "MiniLedger uses your photo library so you can attach a receipt to a loan entry."
+      }
+    },
+    "android": {
+      "package": "com.miniledger.app",
+      "adaptiveIcon": {
+        "backgroundColor": "#E6F4FE",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false,
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.READ_MEDIA_IMAGES"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "MiniLedger uses your photo library so you can attach a receipt to a loan entry.",
+          "cameraPermission": "MiniLedger uses the camera so you can photograph a receipt for a loan entry.",
+          "microphonePermission": false
+        }
+      ],
+      "expo-secure-store",
+      "@react-native-community/datetimepicker",
+      "expo-status-bar"
+    ]
+  }
+}
